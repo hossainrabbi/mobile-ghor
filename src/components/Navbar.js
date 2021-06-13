@@ -16,6 +16,7 @@ const Navbar = () => (
                 <Link to="/about">About</Link>
             </div>
             <NavCart>
+                <Input type="text" placeholder="Search for anything" />
                 <Link to="/cart">
                     <Button>
                         <FiShoppingCart />
@@ -49,7 +50,7 @@ const Container = styled.div`
 
     a {
         color: #ffffff;
-        margin: 0 8px;
+        margin: 0 5px;
         padding: 5px;
     }
 `;
@@ -77,6 +78,15 @@ const NavCart = styled.div`
             display: inline-block;
         }
     }
+`;
+
+const Input = styled.input`
+    padding: 5px;
+    border: 3px solid #f13a02ff;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 10px;
 `;
 
 const Button = styled.button`
