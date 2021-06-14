@@ -14,7 +14,7 @@ import {
     NavMenu
 } from './Navbar.element';
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     const [click, setClick] = useState(false);
 
     return (
@@ -33,7 +33,7 @@ const Navbar = () => {
                         <NavLinkBtn to="/cart">
                             <NavBtn>
                                 <FiShoppingCart />
-                                <span>2</span>
+                                <span>{cart.length}</span>
                             </NavBtn>
                         </NavLinkBtn>
                         <NavLinkBtn to="/login">
