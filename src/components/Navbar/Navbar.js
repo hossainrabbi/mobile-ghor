@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 import { IconContext } from 'react-icons/lib';
+import { useSelector } from 'react-redux';
 import {
     MobileIcon,
     Nav,
@@ -14,7 +15,8 @@ import {
     NavMenu
 } from './Navbar.element';
 
-const Navbar = ({ cart }) => {
+const Navbar = () => {
+    const { cartItems } = useSelector((state) => state);
     const [click, setClick] = useState(false);
 
     return (
@@ -33,7 +35,7 @@ const Navbar = ({ cart }) => {
                         <NavLinkBtn to="/cart">
                             <NavBtn>
                                 <FiShoppingCart />
-                                <span>{cart.length}</span>
+                                <span>{cartItems.length}</span>
                             </NavBtn>
                         </NavLinkBtn>
                         <NavLinkBtn to="/login">
