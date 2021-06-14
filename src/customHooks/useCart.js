@@ -17,13 +17,60 @@ const useCart = () => {
         } else {
             setCartItem(
                 cartItems.map((item) =>
-                    item.id === id ? { ...product, quantity: parseInt(item.quantity) + 1 } : item
+                    item.id === id
+                        ? {
+                              ...product,
+                              quantity: parseInt(item.quantity) + 1,
+                          }
+                        : item
                 )
             );
         }
     };
 
-    return { handleClick };
+    const cartIncrement = (id) => {
+        const cartItem = cartItems.find((item) => item.id === id);
+
+        const incrementCart = cartItems.map((item) =>
+            item.id === id
+                ? {
+                      ...cartItem,
+                      quantity: parseInt(item.quantity) + 1,
+                  }
+                : item
+        );
+
+        setCartItem(incrementCart);
+    };
+
+    const cartDecrement = (id) => {
+        const cartItem = cartItems.find((item) => item.id === id);
+
+        const decrementCart = cartItems.map((item) =>
+            item.id === id
+                ? {
+                      ...cartItem,
+                      quantity: parseInt(item.quantity) > 1 ? parseInt(item.quantity) - 1 : 1,
+                  }
+                : item
+        );
+
+        setCartItem(decrementCart);
+    };
+
+    const removeItem = (id) => {
+        const removeCart = cartItems.filter((item) => item.id !== id);
+
+        setCartItem(removeCart);
+    };
+
+    const removeCart = () => {
+        setCartItem([]);
+    };
+
+    const total = cartItems.reduce((acc, sum) => acc + sum.quantity * sum.price, 0);
+
+    return { handleClick, cartIncrement, cartDecrement, total, removeItem, removeCart };
 };
 
 export default useCart;

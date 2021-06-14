@@ -1,12 +1,21 @@
 import React from 'react';
-import { Button } from '../../globalStyle';
-import { GridItem, ProductContent, ProductImg } from './Products.element';
+import { useHistory } from 'react-router-dom';
+import useCart from '../../customHooks/useCart';
+import { Button, GridItem } from '../../globalStyle';
+import { ProductContent, ProductImg } from './Products.element';
 
-const ProductItem = ({ item, handleClick }) => {
+const ProductItem = ({ item }) => {
     const { id, title, price, brand, imageUrl } = item;
+    const { handleClick } = useCart();
+    const history = useHistory();
+
+    const handleProductDetails = (productId) => {
+        history.push(`/product/${productId}`);
+    };
+
     return (
         <GridItem>
-            <ProductImg src={imageUrl} alt={title} />
+            <ProductImg onClick={() => handleProductDetails(id)} src={imageUrl} alt={title} />
             <ProductContent>
                 <h4>
                     <span>{title}</span>

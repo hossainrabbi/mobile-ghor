@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    img{
+        max-width: 100%;
+        object-fit: contain;
+    }
+
 `;
 
 export const Container = styled.div`
@@ -25,6 +30,22 @@ export const Container = styled.div`
 
     @media screen and (max-width: 991px) {
         padding: 0 15px;
+    }
+`;
+
+export const Grid = styled.div`
+    display: grid;
+    column-gap: 30px;
+`;
+
+export const GridItem = styled.article`
+    box-shadow: 0 0 15px #00000025;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 15px #000000;
     }
 `;
 

@@ -1,21 +1,19 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import useCart from '../../customHooks/useCart';
 import { Container } from '../../globalStyle';
 import ProductItem from './ProductItem';
-import { Grid } from './Products.element';
+import { GridProducts } from './Products.element';
 
 const Products = () => {
     const { products } = useSelector((state) => state);
-    const { handleClick } = useCart();
 
     return (
         <Container>
-            <Grid>
+            <GridProducts>
                 {products.map((item) => (
-                    <ProductItem handleClick={handleClick} item={item} key={item.id} />
+                    <ProductItem item={item} key={item.id} />
                 ))}
-            </Grid>
+            </GridProducts>
         </Container>
     );
 };
