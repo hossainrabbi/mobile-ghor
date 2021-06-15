@@ -1,6 +1,6 @@
 ## Mobile Shop application
 
-#### [Live Line](https://mobile-ghor.netlify.app/)
+#### [Live Link](https://mobile-ghor.netlify.app/)
 
 -   User can added product to cart.
 -   User can view product description.
