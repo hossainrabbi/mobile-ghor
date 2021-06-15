@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import useCart from '../../customHooks/useCart';
-import { Container } from '../../globalStyle';
-import { ClearButton, GridCart, Price } from './Cart.element';
+import { Button, Container } from '../../globalStyle';
+import { GridCart, Price } from './Cart.element';
 import CartItem from './CartItem';
 
 const Cart = () => {
@@ -20,7 +20,7 @@ const Cart = () => {
                     <i /> <i />
                     <Price>
                         <h3>${total}</h3>
-                        <ClearButton onClick={() => removeCart()}>Clear</ClearButton>
+                        <Button onClick={() => removeCart()}>Clear</Button>
                     </Price>
                 </GridCart>
             ) : (

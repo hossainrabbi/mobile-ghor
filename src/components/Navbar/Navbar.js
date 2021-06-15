@@ -31,7 +31,6 @@ const Navbar = () => {
                     </MobileIcon>
                     <NavMenu onClick={() => setClick(!click)} click={click}>
                         <NavLink to="/">Home</NavLink>
-                        <NavLink to="/about">About</NavLink>
                         <NavLinkBtn to="/cart">
                             <NavBtn>
                                 <FiShoppingCart />

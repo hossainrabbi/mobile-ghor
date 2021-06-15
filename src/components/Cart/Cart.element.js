@@ -37,10 +37,6 @@ export const CartBtn = styled(Button)`
     text-align: center;
 `;
 
-export const ClearButton = styled(Button)`
-    width: auto;
-`;
-
 export const Price = styled.span`
     display: flex;
     justify-content: space-between;

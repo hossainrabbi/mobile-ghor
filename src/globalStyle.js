@@ -58,7 +58,6 @@ export const Button = styled.button`
     border-radius: 0;
     display: flex;
     align-items: center;
-    width: 100%;
     text-align: center;
     justify-content: center;
 
