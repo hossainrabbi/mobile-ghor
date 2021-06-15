@@ -46,6 +46,10 @@ const ProductGrid = styled(Grid)`
             margin-bottom: 10px;
         }
     }
+
+    @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 export default ProductDetails;

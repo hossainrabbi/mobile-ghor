@@ -17,6 +17,10 @@ export const GridCart = styled(Grid)`
         justify-self: left;
         align-self: center;
     }
+
+    @media screen and (max-width: 556px) {
+        column-gap: 5px;
+    }
 `;
 
 export const CartQuantity = styled.h4`

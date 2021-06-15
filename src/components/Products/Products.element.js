@@ -3,6 +3,14 @@ import { Grid } from '../../globalStyle';
 
 export const GridProducts = styled(Grid)`
     grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 776px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 556px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 export const ProductImg = styled.img`

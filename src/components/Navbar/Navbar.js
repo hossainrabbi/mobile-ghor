@@ -37,9 +37,6 @@ const Navbar = () => {
                                 <span>{cartItems.length}</span>
                             </NavBtn>
                         </NavLinkBtn>
-                        <NavLinkBtn to="/login">
-                            <NavBtn>Login</NavBtn>
-                        </NavLinkBtn>
                     </NavMenu>
                 </NavContainer>
             </Nav>
