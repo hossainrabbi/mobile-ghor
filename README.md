@@ -2,9 +2,9 @@
 
 #### [Live Link](https://mobile-ghor.netlify.app/)
 
--   User can added product to cart.
--   User can view product description.
--   user can remove added the data from cart
+-   Users can add products to the cart.
+-   Users can view product descriptions.
+-   Users can remove added data from the cart.
 
 ### Technology Used:
 
@@ -15,5 +15,5 @@
 ### upComing future
 
 -   Search functionality.
--   Login with firebase.
+-   Authentication with firebase.
 -   Payment system with stripe.
